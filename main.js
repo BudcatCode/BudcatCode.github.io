@@ -9,3 +9,15 @@ const typed = new Typed('.typed-text', {
   backDelay: 2000,
   loop: true
 });
+
+let goTopbtn = document.getElementById("goTopbtn");
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goTopbtn.style.display = "flex";
+  } else {
+    goTopbtn.style.display = "none";
+  }
+};
